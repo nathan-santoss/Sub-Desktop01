@@ -6,7 +6,24 @@
     <title>Meu primeiro programa</title>
 </head>
 <body>
-    <script src="./main.js"></script>
     <h1>Hello World!</h1>
+    <label for="nome">Digite o número: </label>
+    <input type="text" id = "numero" placeholder="Digite um número aqui">
+    <br><br>
+    <button id = "send" onclick=checkNumber()>Enviar</button>
+    <br><br>
+    <p id = "result"></p>
+
+    <script>
+        const checkNumber = () => {
+            let numeroRecebido = document.getElementById('numero').value
+            document.getElementById('numero').value = ''
+            if(numeroRecebido > 0){
+                document.getElementById('result').innerHTML = `O número ${numeroRecebido} é POSITIVO`
+            }
+            else{document.getElementById('result').innerHTML = `O número ${numeroRecebido} é NEGATIVO`}
+        }
+    </script>
+
 </body>
 </html>

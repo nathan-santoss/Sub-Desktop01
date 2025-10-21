@@ -8,4 +8,6 @@ const criarJanela = () => {
     janela.loadFile('./index.html');
 }
 
-app.whenReady().then( () => criarJanela())
+app.whenReady()
+    .then( () => criarJanela())
+    
